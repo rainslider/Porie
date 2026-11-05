@@ -1,0 +1,12 @@
+services:
+  gamehub:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      ADMIN_CODE: gggrite5   # verander dit!
+    volumes:
+      - gamehub-data:/data
+    restart: unless-stopped
+volumes:
+  gamehub-data:
